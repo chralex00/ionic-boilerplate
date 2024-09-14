@@ -1,15 +1,27 @@
 {
   "name": "ionic-boilerplate",
+  "description": "A boilerplate to start a prohject with Ionic 5 with Angular 9 and TypeScript.",
+  "author": {
+    "name": "Christian Alessandro Atzeni",
+    "email": "christian.alessandro.atzeni.00@outlook.com",
+    "url": "https://github.com/chralex00"
+  },
+  "engines": {
+    "node": "v20.10.0",
+    "npm": "v10.2.3"
+  },
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.1-rc.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "test:unit": "vitest run",
     "test:e2e": "cypress run",
-    "test:unit": "vitest",
-    "lint": "eslint ."
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write src/",
+    "husky:prepare": "husky install"
   },
   "dependencies": {
     "@capacitor/app": "6.0.1",
@@ -32,12 +44,13 @@
     "cypress": "^13.5.0",
     "eslint": "^8.35.0",
     "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.1",
     "jsdom": "^22.1.0",
+    "prettier": "^3.3.3",
     "terser": "^5.4.0",
     "typescript": "^5.1.6",
     "vite": "~5.2.0",
     "vitest": "^0.34.6",
     "vue-tsc": "^2.0.22"
-  },
-  "description": "An Ionic project"
+  }
 }
